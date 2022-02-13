@@ -898,14 +898,14 @@ def main(url):
             else:
                 text += ' | \033[31;1mPAYPAL\033[0m'
         else:
-            text += ' | \033[31;1mTeu\ bisa sadayana\033[0m'
+            text += ' | \033[0;33mTeu bisa sadayana\033[0m'
             save = open('Results/not_vulnerable.txt','a')
             asu = str(url).replace('\r', '')
             save.write(asu+'\n')
             save.close()
     except:
         text = '\033[31;1m#\033[0m '+url
-        text += ' | \033[31;1mTeu\ bisa diakses\033[0m'
+        text += ' | \033[31;1mTeu bisa diakses\033[0m'
         save = open('Results/not_vulnerable.txt','a')
         asu = str(url).replace('\r', '')
         save.write(asu+'\n')
@@ -936,9 +936,9 @@ if __name__ == '__main__':
         lists = readcfg.get('DB', 'FILES')
         numthread = readcfg.get('DB', 'THREAD')
         sessi = readcfg.get('DB', 'SESSION')
-        print("log session bot found! restore session")
+        print("meunang cangcut! ambuan ulah")
         print(('''Using Configuration :\n\tFILES='''+lists+'''\n\tTHREAD='''+numthread+'''\n\tSESSION='''+sessi))
-        tanya = input("Want to contineu session ? [Y/n] ")
+        tanya = input("Tuluykeun Ulah ? [Y/n] ")
         if "Y" in tanya or "y" in tanya:
             lerr = open(lists).read().split("\n"+sessi)[1]
             readsplit = lerr.splitlines()
@@ -951,15 +951,15 @@ if __name__ == '__main__':
             readsplit = open(lists).read().splitlines()
         except:
             try:
-                lists = input("websitelist ? ")
+                lists = input("Ek diabuskeun ka Janda ? ")
                 readsplit = open(lists).read().splitlines()
             except:
-                print("Wrong input or list not found!")
+                print("Euweuh Jandana euy!")
                 exit()
             try:
-                numthread = input("threads ? ")
+                numthread = input("Sabaraha Ronde ? ")
             except:
-                print("Wrong thread number!")
+                print("Ronde Na Sabaraha!")
                 exit()
     pool = ThreadPool(int(numthread))
     for url in readsplit:
