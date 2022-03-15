@@ -1,4 +1,4 @@
-# anna
+# Myer
 
 <H2>How To Install.</H2><p><p>
 Clone This Repository In Your Terminal<p>
